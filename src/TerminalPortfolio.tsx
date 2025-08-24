@@ -103,14 +103,41 @@ export default function TerminalPortfolio(): JSX.Element {
         </div>)
       },
       skills: () => {
-        addLine(<div className="space-y-0.5">
-          <div className="font-semibold">Skills</div>
-          <div>Languages: C/C++, Python, JavaScript/TypeScript, SQL, Bash</div>
-          <div>Tools & Practices: Git, CI/CD, Unit Testing, Nginx, REST APIs, Agile Development</div>
-		  <div>Systems: Linux (Ubuntu, Arch), Docker, POSIX threads, TCP/IP, Memory Management, Shell Programming</div>
-          <div>Core CS: Data Structures, Algorithms, Time/Space Complexity Analysis, Concurrent Programming, Network Protocol</div>
-		  <div>Web Technologies: Node.js, Fastify, SQLite, HTML5/CSS3, Tailwind, Real-time WebSockets</div>
-        </div>)
+        addLine(
+          <div className="space-y-0.5">
+            <div className="font-semibold">Skills</div>
+            <div>
+              <span className="font-semibold underline underline-offset-2 decoration-2">
+                Languages:
+              </span>{' '}
+              C/C++, Python, JavaScript/TypeScript, SQL, Bash
+            </div>
+            <div>
+              <span className="font-semibold underline underline-offset-2 decoration-2">
+                Tools & Practices:
+              </span>{' '}
+              Git, CI/CD, Unit Testing, Nginx, REST APIs, Agile Development
+            </div>
+            <div>
+              <span className="font-semibold underline underline-offset-2 decoration-2">
+                Systems:
+              </span>{' '}
+              Linux (Ubuntu, Arch), Docker, POSIX threads, TCP/IP, Memory Management, Shell Programming
+            </div>
+            <div>
+              <span className="font-semibold underline underline-offset-2 decoration-2">
+                Core CS:
+              </span>{' '}
+              Data Structures, Algorithms, Time/Space Complexity Analysis, Concurrent Programming, Network Protocol
+            </div>
+            <div>
+              <span className="font-semibold underline underline-offset-2 decoration-2">
+                Web Technologies:
+              </span>{' '}
+              Node.js, Fastify, SQLite, HTML5/CSS3, Tailwind, Real-time WebSockets
+            </div>
+          </div>
+        )
       },
       contact: () => {
         addLine(<div className="space-y-0.5">
