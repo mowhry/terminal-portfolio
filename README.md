@@ -1,69 +1,65 @@
-# React + TypeScript + Vite
+# 💻 Jessim — Terminal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive personal portfolio with a **terminal-style interface** designed as a single page application. Built with **Vite**, **React**, **TypeScript** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🖥️ Interactive and responsive terminal interface
+- ⌨️ Custom commands (`help`, `projects`, `skills`, `contact`, etc.)
+- 📱 Mobile and desktop compatible
+- 🚀 Optimized performance with Vite
+- 🎨 Modern styling with Tailwind CSS
+- 📄 CV integration (view and download)
+- 🔍 Intuitive command-based navigation
 
-## Expanding the ESLint configuration
+## 🎯 Available commands
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Command | Description |
+|---------|-------------|
+| `help` | Display list of commands |
+| `about` | Personal introduction |
+| `projects` | List of projects |
+| `project <id>` | Details of a specific project |
+| `skills` | Technical skills |
+| `contact` | Contact information |
+| `cv [open\|download]` | Open or download CV |
+| `clear` | Clear the terminal |
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Node.js** ≥ 20.19 (recommended **22 LTS**)
+- **npm** or **yarn**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+> 💡 **Tip with nvm**:
+> ```bash
+> nvm install 22 && nvm use 22
+> echo "22" > .nvmrc  # (optional)
+> ```
+
+## 🚀 Installation and setup
+
+```bash
+# Clone the repository
+git clone https://github.com/username/terminal-portfolio.git
+cd terminal-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Production build
+npm run build
+
+# Preview the build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend**: React 18, TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Font**: Fira Code (monospace)
