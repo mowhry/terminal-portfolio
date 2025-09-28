@@ -21,7 +21,7 @@ const PROJECTS = [
   { id: 2, name: 'ft_irc',         desc: 'RFC1459-compliant IRC server · C++ · network protocols · non-blocking I/O',                url: 'https://github.com/mowhry/ft_irc' },
   { id: 3, name: 'Cub3D',          desc: 'Raycasting engine · C · textures · sprites · collisions',         url: 'https://github.com/mowhry/cub3d' },
   { id: 4, name: 'Philosophers',   desc: 'POSIX threads · deadlock prevention · monitors',                  url: 'https://github.com/mowhry/philosophers' },
-  { id: 5, name: 'Inception',      desc: 'Docker Compose · Nginx · WordPress · MariaDB · TLS',              url: 'https://github.com/mowhry/inception' },
+  { id: 5, name: 'Cloud-1',        desc: 'Automated cloud deployment · Ansible · Docker Compose · Prometheus/Grafana monitoring',              url: 'https://github.com/mowhry/cloud-1' },
 ];
 
 export default function TerminalPortfolio(): JSX.Element {
@@ -76,7 +76,7 @@ export default function TerminalPortfolio(): JSX.Element {
           <div>project &lt;id&gt; — show project details</div>
           <div>skills — technical skills</div>
           <div>contact — contact info</div>
-		  <div>cv [-o|-d] — open in new tab or download the PDF</div>
+		      <div>cv [-o|-d] — open in new tab or download the PDF</div>
           <div>clear — clear terminal</div>
         </div>)
       },
@@ -84,7 +84,7 @@ export default function TerminalPortfolio(): JSX.Element {
         addLine(<div className="space-y-0.5">
           <div className="font-semibold">About</div>
           <div>I'm Jessim Skiba, a software engineering student @42 Paris.</div>
-          <div>Systems programming, networks, looking for a 6-month internship. I build scalable, reliable tools and products.</div>
+          <div>Systems programming, networks, currently in a 6-month internship as an SRE @Sunday. I build scalable, reliable tools and products.</div>
         </div>)
       },
       projects: () => {
@@ -228,8 +228,8 @@ export default function TerminalPortfolio(): JSX.Element {
           {lines.map(l => (<div key={l.id} className="mb-1 break-words">{l.node}</div>))}
 
           {/* Prompt */}
-          <form onSubmit={onSubmit} className="mt-2">
-            <label className="flex items-center gap-3">
+          <div className="mt-2">
+            <div className="flex items-center gap-3">
               <span className="text-blue-500">jessim@dev</span>:~$
               <input
                 ref={inputRef}
@@ -241,8 +241,8 @@ export default function TerminalPortfolio(): JSX.Element {
                 spellCheck={false}
                 placeholder="type 'help'"
               />
-            </label>
-          </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
